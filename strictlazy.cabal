@@ -1,0 +1,46 @@
+name:                strictlazy
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/strictlazy#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2018 Author name here
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  src/Lexer.x
+                   , src/Parser.y
+                   
+executable strictlazy
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , overloaded-records
+                     , data-default
+                     , array
+                     , lens
+                     , pretty
+                     , neat-interpolation
+                     , text
+                     , containers
+                     , mtl
+                     , parallel
+                     , transformers
+  build-tools:         alex
+                     , happy
+  other-modules:       Lexer
+                     , Parser
+  extensions:          DataKinds
+                     , FlexibleInstances
+                     , MultiParamTypeClasses
+                     , TemplateHaskell
+                     , TypeFamilies
+                     , ConstraintKinds
+                     , FlexibleContexts
+                     , TypeOperators
+                     , OverloadedLabels
+                     , DuplicateRecordFields                     
